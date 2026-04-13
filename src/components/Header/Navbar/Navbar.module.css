@@ -1,0 +1,55 @@
+.navWrapper {
+	display: none;
+}
+
+/* Mobile nav open */
+.mobileOpen {
+	display: flex;
+	flex-direction: column;
+	position: fixed;
+	top: 0;
+	right: 0;
+	width: 70vw;
+	max-width: 320px;
+	height: 100vh;
+	background: var(--background);
+	box-shadow: -2px 0 12px rgba(0, 0, 0, 0.12);
+	z-index: 40;
+	padding: 2rem 1.5rem;
+	gap: 1.5rem;
+	align-items: flex-start;
+	animation: slideIn 0.2s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+@keyframes slideIn {
+	from {
+		transform: translateX(100%);
+	}
+	to {
+		transform: translateX(0);
+	}
+}
+
+/* Desktop nav */
+@media (min-width: 768px) {
+	.navWrapper {
+		display: flex;
+		flex-direction: row;
+		justify-content: center;
+		align-items: center;
+		position: absolute;
+		left: 50%;
+		top: 50%;
+		transform: translate(-50%, -50%);
+		height: auto;
+		width: max-content;
+		background: none;
+		box-shadow: none;
+		padding: 0;
+		gap: 2.5rem;
+		z-index: 10;
+	}
+	.mobileOpen {
+		display: none;
+	}
+}
