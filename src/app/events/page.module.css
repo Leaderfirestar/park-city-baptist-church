@@ -1,0 +1,27 @@
+.main {
+	max-width: 900px;
+	margin: 0 auto;
+	padding: 2rem 1rem 3rem 1rem;
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+}
+.heading {
+	font-size: 2.2rem;
+	font-weight: 700;
+	margin-bottom: 2rem;
+	color: #1e293b;
+	text-align: center;
+}
+.eventsGrid {
+	width: 100%;
+	display: grid;
+	grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+	gap: 2rem;
+}
+.noEvents {
+	color: #64748b;
+	font-size: 1.1rem;
+	text-align: center;
+	margin-top: 2rem;
+}
