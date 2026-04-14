@@ -1,7 +1,7 @@
 "use client";
 import { useState } from "react";
 import styles from "./Header.module.css";
-import Logo from "./Logo/Logo";
+import Logo from "../Logo/Logo";
 import Navbar from "./Navbar/Navbar";
 
 function Header() {

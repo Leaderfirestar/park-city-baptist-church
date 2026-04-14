@@ -1,0 +1,19 @@
+.socialBar {
+	display: flex;
+	gap: 1.2rem;
+	margin: 0.5rem 0 0.5rem 0;
+}
+
+.socialIcon {
+	color: #222;
+	opacity: 0.7;
+	transition:
+		opacity 0.2s,
+		color 0.2s;
+	display: flex;
+	align-items: center;
+}
+.socialIcon:hover {
+	opacity: 1;
+	color: #0077b5;
+}
