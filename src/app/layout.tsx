@@ -24,9 +24,17 @@ export default function RootLayout({
 					content="width=device-width, initial-scale=1.0, viewport-fit=cover"
 				/>
 			</head>
-			<body style={{ margin: "10px 10px 0px" }}>
-				<Header />
-				{children}
+			<body>
+				<div
+					style={{
+						maxWidth: "var(--max-width-global)",
+						margin: "10px auto",
+						width: "100%",
+					}}
+				>
+					<Header />
+					{children}
+				</div>
 			</body>
 		</html>
 	);
