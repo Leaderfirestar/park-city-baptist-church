@@ -13,8 +13,9 @@ function Navbar({ mobileNavOpen = false, closeMobileNav }: Props) {
 
 	const navLinks = [
 		{ text: "Home", href: "/" },
+		{ text: "Sermons", href: "/sermons" },
 		{ text: "Events", href: "/events" },
-		{ text: "Groups", href: "/groups" },
+		// { text: "Groups", href: "/groups" },
 	];
 
 	return (

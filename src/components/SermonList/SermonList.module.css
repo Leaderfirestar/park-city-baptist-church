@@ -1,0 +1,332 @@
+.actionButtonsRow {
+	display: flex;
+	flex-direction: row;
+	align-items: center;
+	gap: 1rem;
+	margin-bottom: 2rem;
+}
+
+.filterModalApplyBtn {
+	background: var(--primary);
+	color: #fff;
+	border: none;
+	border-radius: var(--radius-md);
+	padding: 0.5em 1.5em;
+	font-size: var(--font-size-base);
+	font-weight: var(--font-weight-medium);
+	cursor: pointer;
+	transition:
+		background 0.2s,
+		color 0.2s;
+}
+.filterModalApplyBtn:hover {
+	background: var(--accent);
+	color: #fff;
+}
+.filterButton,
+.sortButton {
+	background: var(--primary);
+	color: #fff;
+	border: none;
+	border-radius: var(--radius-lg);
+	width: 44px;
+	height: 44px;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	font-size: 1.25rem;
+	cursor: pointer;
+	transition:
+		background 0.2s,
+		color 0.2s;
+	margin-bottom: 0;
+	padding: 0;
+}
+.filterButton:hover,
+.filterButton:focus,
+.sortButton:hover,
+.sortButton:focus {
+	background: var(--accent);
+	color: #fff;
+}
+
+.sortMenu {
+	background: var(--background);
+	border-radius: var(--radius-md);
+	box-shadow: 0 4px 24px rgba(0, 0, 0, 0.12);
+	padding: 0.5rem 0;
+	min-width: 180px;
+	display: flex;
+	flex-direction: column;
+	align-items: stretch;
+}
+.sortMenuItem {
+	background: none;
+	border: none;
+	color: var(--primary);
+	font-size: var(--font-size-base);
+	padding: 0.75em 1.5em;
+	text-align: left;
+	cursor: pointer;
+	transition:
+		background 0.2s,
+		color 0.2s;
+}
+.sortMenuItem[aria-pressed="true"],
+.sortMenuItem:hover,
+.sortMenuItem:focus {
+	background: var(--secondary);
+	color: var(--accent);
+}
+
+.filterModalOverlay {
+	position: fixed;
+	top: 0;
+	left: 0;
+	width: 100vw;
+	height: 100vh;
+	background: rgba(0, 0, 0, 0.3);
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	z-index: 1000;
+}
+.filterModal {
+	background: var(--background);
+	border-radius: var(--radius-lg);
+	box-shadow: 0 4px 32px rgba(0, 0, 0, 0.18);
+	padding: 2.5rem 2rem;
+	min-width: 320px;
+	max-width: 90vw;
+	max-height: 90vh;
+	overflow-y: auto;
+}
+.filterModalCloseBtn,
+.filterModalCloseBtn {
+	position: absolute;
+	top: 1rem;
+	right: 1rem;
+	background: transparent;
+	color: var(--primary);
+	border: none;
+	border-radius: 50%;
+	width: 2.25rem;
+	height: 2.25rem;
+	font-size: 2rem;
+	font-weight: bold;
+	cursor: pointer;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	transition:
+		background 0.2s,
+		color 0.2s;
+	z-index: 10;
+}
+.filterModalCloseBtn:hover {
+	background: var(--secondary);
+	color: var(--accent);
+}
+.filterModalClearBtn {
+	background: var(--secondary);
+	color: var(--primary);
+	border: none;
+	border-radius: var(--radius-md);
+	padding: 0.5em 1.5em;
+	font-size: var(--font-size-base);
+	font-weight: var(--font-weight-medium);
+	cursor: pointer;
+	transition:
+		background 0.2s,
+		color 0.2s;
+	margin-right: 0.5em;
+}
+.filterModalClearBtn:hover {
+	background: var(--primary);
+	color: #fff;
+}
+.sermonListContainer {
+	max-width: var(--max-width-global);
+	margin: 0 auto;
+	padding: var(--spacing-lg) var(--spacing-md);
+	background: var(--background);
+	color: var(--foreground);
+	font-family: var(--font-family-sans);
+}
+
+.livestreamBanner {
+	background: var(--secondary);
+	border-radius: var(--radius-md);
+	box-shadow: 0 2px 8px rgba(0, 0, 0, 0.06);
+	margin-bottom: var(--spacing-lg);
+	padding: var(--spacing-md) var(--spacing-lg);
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+}
+.livestreamTitle {
+	color: var(--accent);
+	font-size: var(--font-size-h2);
+	font-weight: var(--font-weight-bold);
+	margin-bottom: var(--spacing-md);
+	letter-spacing: 0.02em;
+}
+.livestreamVideoWrapper {
+	width: 100%;
+	max-width: 640px;
+	aspect-ratio: 16/9;
+	background: #000;
+	border-radius: var(--radius-sm);
+	overflow: hidden;
+	box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+}
+.livestreamIframe {
+	border: none;
+}
+
+.sermonListLayout {
+	display: flex;
+	flex-direction: row;
+	gap: var(--spacing-xl);
+}
+
+.sermonListSidebar {
+	min-width: 220px;
+	background: var(--secondary);
+	border-radius: var(--radius-md);
+	padding: var(--spacing-lg) var(--spacing-md);
+	box-shadow: 0 2px 8px rgba(0, 0, 0, 0.04);
+	display: flex;
+	flex-direction: column;
+	gap: var(--spacing-lg);
+}
+.sidebarTitle {
+	font-size: var(--font-size-lg);
+	font-weight: var(--font-weight-semibold);
+	margin-bottom: var(--spacing-md);
+	color: var(--primary);
+}
+.sidebarInput {
+	width: 100%;
+	padding: var(--spacing-sm);
+	border: 1px solid var(--border);
+	border-radius: var(--radius-sm);
+	font-size: var(--font-size-base);
+	margin-bottom: var(--spacing-sm);
+}
+.sidebarSection {
+	margin-bottom: var(--spacing-lg);
+}
+.sidebarLabel {
+	font-size: var(--font-size-sm);
+	font-weight: var(--font-weight-medium);
+	color: var(--text-secondary);
+	margin-bottom: var(--spacing-xs);
+	display: block;
+}
+.sidebarMultiselect {
+	display: flex;
+	flex-wrap: wrap;
+	gap: var(--spacing-xs);
+}
+.sidebarMultiselectBtn {
+	background: var(--background);
+	color: var(--primary);
+	border: 1px solid var(--primary);
+	border-radius: var(--radius-lg);
+	padding: 0.25em 1em;
+	font-size: var(--font-size-xs);
+	font-weight: var(--font-weight-medium);
+	cursor: pointer;
+	transition:
+		background 0.2s,
+		color 0.2s;
+}
+.sidebarMultiselectBtn.selected,
+.sidebarMultiselectBtn:active {
+	background: var(--primary);
+	color: #fff;
+}
+
+.sermonListMain {
+	flex: 1;
+	text-align: center;
+}
+.sermonListHeader {
+	display: flex;
+	flex-direction: row;
+	align-items: center;
+	justify-content: space-between;
+	flex-wrap: wrap;
+	gap: var(--spacing-lg);
+}
+.mainTitle {
+	font-size: var(--font-size-h1);
+	font-weight: var(--font-weight-bold);
+	margin-bottom: var(--spacing-lg);
+	color: var(--primary);
+}
+.loading {
+	color: var(--text-secondary);
+	font-size: var(--font-size-lg);
+	text-align: center;
+	margin: var(--spacing-lg) 0;
+}
+.sermonListGrid {
+	display: grid;
+	grid-template-columns: 1fr 1fr;
+	gap: var(--spacing-lg);
+}
+@media (max-width: 900px) {
+	.sermonListGrid {
+		grid-template-columns: 1fr;
+	}
+	.sermonListLayout {
+		flex-direction: column;
+		gap: var(--spacing-lg);
+	}
+	.sermonListSidebar {
+		width: 100%;
+		margin-bottom: var(--spacing-lg);
+	}
+}
+.noSermonsAlert {
+	background: var(--secondary);
+	border-radius: var(--radius-md);
+	padding: var(--spacing-lg);
+	text-align: center;
+	color: var(--error);
+	margin-top: var(--spacing-lg);
+}
+.noSermonsTitle {
+	font-size: var(--font-size-lg);
+	font-weight: var(--font-weight-semibold);
+}
+.pagination {
+	display: flex;
+	justify-content: center;
+	gap: var(--spacing-xs);
+	margin-top: var(--spacing-lg);
+}
+.paginationBtn {
+	background: var(--background);
+	color: var(--primary);
+	border: 1px solid var(--primary);
+	border-radius: var(--radius-lg);
+	padding: 0.25em 1em;
+	font-size: var(--font-size-xs);
+	font-weight: var(--font-weight-medium);
+	cursor: pointer;
+	transition:
+		background 0.2s,
+		color 0.2s;
+}
+.paginationBtn.selected,
+.paginationBtn:active {
+	background: var(--primary);
+	color: #fff;
+}
+.selected {
+	background: var(--primary);
+	color: #fff;
+}
